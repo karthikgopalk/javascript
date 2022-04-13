@@ -60,5 +60,32 @@
 // let n = 5;
 // n += 6;
 // console.log(n);
-let a = 5;
-alert(a++);
+
+// let a = 5;
+// alert(a++);
+
+// let a = 5;
+// console.log(--a);
+// console.log(a);
+
+// let a = (1 + 2, 5 + 3);
+// console.log(a);
+
+const date = new Date();
+const dayNumber = date.getDay();
+const days = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
+console.log('Today is:', days[dayNumber]);
+let hours = date.getHours();
+let amPm;
+hours < 12 ? (amPm = 'AM') : (amPm = 'PM') ? (hours -= 12) : hours;
+console.log(
+  `Current time is: ${hours} ${amPm} : ${date.getMinutes()} : ${date.getSeconds()}`
+);
