@@ -149,7 +149,14 @@
 //   console.log(i--);
 // }
 
-let i = 0;
-do {
-  console.log(i++);
-} while (i < 5);
+// let j = 0;
+// while (j < 5) console.log('while', j++);
+
+// let i = 0;
+// do {
+//   console.log('do', i++);
+// } while (i < 5);
+
+// for (let k = 0; k < 5; k++) {
+//   console.log('for', k);
+// }
