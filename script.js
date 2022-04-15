@@ -71,21 +71,85 @@
 // let a = (1 + 2, 5 + 3);
 // console.log(a);
 
-const date = new Date();
-const dayNumber = date.getDay();
-const days = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-];
-console.log('Today is:', days[dayNumber]);
-let hours = date.getHours();
-let amPm;
-hours < 12 ? (amPm = 'AM') : (amPm = 'PM') ? (hours -= 12) : hours;
-console.log(
-  `Current time is: ${hours} ${amPm} : ${date.getMinutes()} : ${date.getSeconds()}`
-);
+// const date = new Date();
+// const dayNumber = date.getDay();
+// const days = [
+//   'Sunday',
+//   'Monday',
+//   'Tuesday',
+//   'Wednesday',
+//   'Thursday',
+//   'Friday',
+//   'Saturday',
+// ];
+// console.log('Today is:', days[dayNumber]);
+// let hours = date.getHours();
+// let amPm;
+// hours < 12 ? (amPm = 'AM') : (amPm = 'PM') ? (hours -= 12) : hours;
+// console.log(
+//   `Current time is: ${hours} ${amPm} : ${date.getMinutes()} : ${date.getSeconds()}`
+// );
+
+// function printHandler() {
+//   window.print();
+// }
+
+// const date = new Date();
+// let currentDay = date.getDate();
+// let currentMonth = date.getMonth();
+// currentDay <= 9 ? (currentDay = '0' + currentDay) : currentDay;
+// currentMonth <= 9 ? (currentMonth = '0' + currentMonth) : currentMonth;
+// console.log(`${currentDay}-${currentMonth}-${date.getFullYear()}`);
+
+// let s1 = 5,
+//   s2 = 6,
+//   s3 = 7;
+// let s = (s1 + s2 + s3) / 2;
+// let area = Math.sqrt(s * (s - s1) * (s - s2) * (s - s3));
+// console.log(area);
+
+// if (0) {
+//   console.log('0');
+// }
+
+// const value = +prompt('enter the value');
+// let result;
+// if (value > 0) result = 'greater than 0';
+// else if (value < 0) result = 'lesser than 0';
+// else result = 'equals to ero';
+// console.log(result);
+
+// let a = 10;
+// if (a == 11 || a == 12 || a == 5) {
+//   console.log('or');
+// }
+
+// const checkAdmin = prompt('Enter the user');
+// if (checkAdmin == 'Admin') {
+//   const enterPassword = prompt('Enter the password');
+//   if (enterPassword == 'TheMaster') console.log('Welcome');
+//   else if (enterPassword == '' || null || undefined) console.log('cancelled');
+//   else console.log('wrong password');
+// } else if (checkAdmin == '' || null || undefined) console.log('cancelled');
+// else console.log("I don' know you");
+
+// let a,
+//   b = 5;
+// console.log(a != undefined && a != null ? a : b);
+// console.log(a ?? b);
+
+// let bio = {
+//   name: 'karthy',
+//   bio: null,
+// };
+// console.log(bio?.age);
+
+// let i = 5;
+// while (i) {
+//   console.log(i--);
+// }
+
+let i = 0;
+do {
+  console.log(i++);
+} while (i < 5);
