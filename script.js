@@ -160,3 +160,28 @@
 // for (let k = 0; k < 5; k++) {
 //   console.log('for', k);
 // }
+
+// let i = 0;
+// for (; i < 5; ) {
+//   console.log(i++);
+// }
+
+// let sum = 0;
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) continue;
+//   console.log(i);
+// }
+
+// let txt = 'I can eat bananas all day';
+// let x = txt.slice(10, 17);
+// console.log(x);
+
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 == 0) {
+    console.log(i);
+  }
+}
+
+// for (let i = 0; i < 3; i++) {
+//   console.log(i);
+// }
