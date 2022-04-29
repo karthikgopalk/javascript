@@ -1,25 +1,63 @@
-let billion = 1_000_000_000;
-console.log(billion);
-console.log(7.3e9);
+//string//
 
-let num = 255;
-console.log(num.toString(16));
-console.log((123456).toString(36));
+//specific character//
 
-console.log(Math.floor(3.9));
-console.log(Math.ceil(4.1));
-console.log(Math.round(5.45));
-console.log(Math.trunc(8.98));
-console.log(+(1.67).toFixed(1));
-console.log(+(0.1 + 0.2).toFixed(2));
-console.log(9999999999999999);
-console.log(+0 === -0);
-console.log(isNaN(NaN));
-console.log(isFinite('6.78'));
-console.log(isFinite(76));
-consoles.log(parseInt('67'));
-prompt('hello');
-let a = parseInt(prompt('enter a', 0));
-// let b = Number(prompt('enter b', 0));
-// let c = +prompt('enter c', 0);
-// console.log(a + b + c);
+// console.log('hello'.length);
+// let a = 'hi people';
+// console.log(a[1]);
+// console.log(a.charAt(3));
+// console.log(a[a.length - 1]);
+
+// for (let d of a) {
+//   console.log(d);
+// }
+
+// let s = 'javascript';
+// s[2] = 'a';
+// console.log(s[2]);
+// s = 'live' + s[4];
+
+// console.log(s.toUpperCase());
+// console.log(s.toLowerCase());
+// console.log(s[0].toUpperCase());
+
+//pascalcase//
+
+// for (let caseVal of s) {
+//   let caps;
+//   if (caseVal == 'j') {
+//     caps = caseVal.toUpperCase();
+//     console.log(caps);
+//   } else console.log(caseVal);
+// }
+
+//indexof//
+// let a = 'asdfg';
+// console.log(a.indexOf('s'));
+
+// let b = 'lets complete javascript soon';
+// console.log(b.indexOf('javascript', 15));
+
+//search//
+
+// let val = 'let as search as for as';
+// let search = 'as';
+// let pos = 0;
+// while (true) {
+//   let foundPos = val.indexOf(search, pos);
+//   if (foundPos == -1) break;
+//   console.log(foundPos);
+//   pos = foundPos + 1;
+// }
+// if (pos == 0) console.log('no search found');
+
+//bitwise or//
+
+// console.log(~2);
+
+//includes startswith endswith//
+
+// let a = 'it is a test';
+// console.log(a.includes('is', 4));
+// console.log(a.startsWith('it'));
+// console.log(a.endsWith('est'));
