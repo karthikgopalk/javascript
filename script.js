@@ -61,3 +61,67 @@
 // console.log(a.includes('is', 4));
 // console.log(a.startsWith('it'));
 // console.log(a.endsWith('est'));
+
+//slice substring substr//
+
+// let demo = 'cutting value';
+// console.log(demo.slice(2, 5));
+// console.log(demo.substring(5, 2));
+// console.log(demo.substr(2, 5));
+
+//codepointat//
+
+// console.log('Z'.codePointAt(0));
+
+// let str = '';
+// for (let i = 65; i < 123; i++) {
+//   str += String.fromCodePoint(i);
+// }
+// console.log(str);
+
+//compare string//
+// console.log('hello'.localeCompare('Hello'));
+
+// console.log('😀'.charCodeAt(0).toString());
+
+//normalize//
+
+// let a = '\u0041\u006d\u00e9\u006c\u0069\u0065';
+// console.log(a);
+// let aNfc = a.normalize('NFC');
+// console.log(aNfc);
+
+//pascalcase//
+
+// function ucFirst(text) {
+//   let pascalcase = text[0].toUpperCase() + text.slice(1);
+//   return pascalcase;
+// }
+// console.log(ucFirst('demo'));
+
+//checkspam//
+
+// function checkSpam(text) {
+//   let lowercase = text.toLowerCase();
+//   return lowercase.includes('viagra') || lowercase.includes('xxx');
+// }
+// console.log(checkSpam('VIAgra'));
+// console.log(checkSpam('xxxxx'));
+// console.log(checkSpam('check'));
+
+//truncate//
+
+// function truncate(inputText, maxLength) {
+//   return inputText.length > maxLength
+//     ? `${inputText.substr(0, maxLength)}...`
+//     : inputText;
+// }
+// console.log(truncate('hello how are you', 10));
+// console.log(truncate('hello how are you', 5));
+
+//extract currency value//
+
+// function extractCurrencyValue(inputText) {
+//   return parseInt(inputText.slice(1));
+// }
+// console.log(extractCurrencyValue('$100') == 100);
