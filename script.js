@@ -1,127 +1,101 @@
-//string//
+//array methods//
 
-//specific character//
+// let arr = new Array();
+// let arr1 = [];
+// let fruits = ['kiwi', 'apple', 'orange'];
+// console.log(fruits);
+// fruits[1] = 'mango';
+// console.log(fruits[1]);
+// fruits[3] = 'grapes';
+// console.log(fruits);
+// console.log(fruits.length);
+// let arr3 = [
+//   'demo',
+//   1,
+//   { obj: 'objVal' },
+//   function () {
+//     return 10;
+//   },
+//   true,
+// ];
+// console.log(arr3);
 
-// console.log('hello'.length);
-// let a = 'hi people';
-// console.log(a[1]);
-// console.log(a.charAt(3));
-// console.log(a[a.length - 1]);
+//at//
 
-// for (let d of a) {
-//   console.log(d);
+// console.log(fruits[fruits.length - 1]);
+// console.log(fruits.at(-3));
+
+//pop push shift unshift//
+// let fruits = ['kiwi', 'apple', 'orange'];
+// fruits.pop();
+// fruits.push('mango', 'guava');
+// fruits.shift();
+// fruits.unshift('strawberry', 'papaya');
+// console.log(fruits);
+
+//array is object//
+
+// let arr = [];
+// arr[3] = 'one';
+// arr.age = 10;
+// console.log(arr);
+
+//for of//
+
+// let arr = ['red', 'blue', 'green'];
+// for (let as of arr) {
+//   console.log(as);
+// }
+// for (let key in arr) {
+//   console.log(key);
 // }
 
-// let s = 'javascript';
-// s[2] = 'a';
-// console.log(s[2]);
-// s = 'live' + s[4];
+//matrix//
 
-// console.log(s.toUpperCase());
-// console.log(s.toLowerCase());
-// console.log(s[0].toUpperCase());
+// let arr = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// console.log(arr);
 
-//pascalcase//
+//tostring//
 
-// for (let caseVal of s) {
-//   let caps;
-//   if (caseVal == 'j') {
-//     caps = caseVal.toUpperCase();
-//     console.log(caps);
-//   } else console.log(caseVal);
+// let arr = [1, 2, 3];
+// console.log(String(arr) == '1,2,3');
+// console.log([] + 1);
+
+//array problem//
+
+// let arr = ['jazz', 'blues'];
+// console.log(arr);
+// arr.push('rock-n-roll');
+// console.log(arr);
+// arr[Math.floor((arr.length - 1) / 2)] = 'classics';
+// console.log(arr);
+// arr.shift();
+// console.log(arr);
+// arr.unshift('rap', 'regge');
+// console.log(arr);
+
+//aray function//
+// let arr = ['a', 'b'];
+// arr[2] = function () {
+//   return this;
+// };
+// console.log(arr[2]());
+// function sum() {
+//   let arr = [];
+//   let a = +prompt('enter number', 0);
+//   while (true) {
+//     if (a === '' || undefined || null) break;
+//     arr.push(a);
+//   }
+//   let sum = 0;
+//   for (let key of arr) {
+//     sum += key;
+//   }
+//   console.log(sum);
+//   return sum;
 // }
-
-//indexof//
-// let a = 'asdfg';
-// console.log(a.indexOf('s'));
-
-// let b = 'lets complete javascript soon';
-// console.log(b.indexOf('javascript', 15));
-
-//search//
-
-// let val = 'let as search as for as';
-// let search = 'as';
-// let pos = 0;
-// while (true) {
-//   let foundPos = val.indexOf(search, pos);
-//   if (foundPos == -1) break;
-//   console.log(foundPos);
-//   pos = foundPos + 1;
-// }
-// if (pos == 0) console.log('no search found');
-
-//bitwise or//
-
-// console.log(~2);
-
-//includes startswith endswith//
-
-// let a = 'it is a test';
-// console.log(a.includes('is', 4));
-// console.log(a.startsWith('it'));
-// console.log(a.endsWith('est'));
-
-//slice substring substr//
-
-// let demo = 'cutting value';
-// console.log(demo.slice(2, 5));
-// console.log(demo.substring(5, 2));
-// console.log(demo.substr(2, 5));
-
-//codepointat//
-
-// console.log('Z'.codePointAt(0));
-
-// let str = '';
-// for (let i = 65; i < 123; i++) {
-//   str += String.fromCodePoint(i);
-// }
-// console.log(str);
-
-//compare string//
-// console.log('hello'.localeCompare('Hello'));
-
-// console.log('😀'.charCodeAt(0).toString());
-
-//normalize//
-
-// let a = '\u0041\u006d\u00e9\u006c\u0069\u0065';
-// console.log(a);
-// let aNfc = a.normalize('NFC');
-// console.log(aNfc);
-
-//pascalcase//
-
-// function ucFirst(text) {
-//   let pascalcase = text[0].toUpperCase() + text.slice(1);
-//   return pascalcase;
-// }
-// console.log(ucFirst('demo'));
-
-//checkspam//
-
-// function checkSpam(text) {
-//   let lowercase = text.toLowerCase();
-//   return lowercase.includes('viagra') || lowercase.includes('xxx');
-// }
-// console.log(checkSpam('VIAgra'));
-// console.log(checkSpam('xxxxx'));
-// console.log(checkSpam('check'));
-
-//truncate//
-
-// function truncate(inputText, maxLength) {
-//   return inputText.length > maxLength
-//     ? `${inputText.substr(0, maxLength)}...`
-//     : inputText;
-// }
-// console.log(truncate('hello how are you', 10));
-// console.log(truncate('hello how are you', 5));
-
-//extract currency value//
-
-// function extractCurrencyValue(inputText) {
-//   return parseInt(inputText.slice(1));
-// }
-// console.log(extractCurrencyValue('$100') == 100);
+// sum();
