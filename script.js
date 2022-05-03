@@ -135,3 +135,27 @@
 // ['a', 'b', 'c'].forEach((item, index, array) =>
 //   console.log(item, index, array)
 // );
+
+//indexof lastindexof includes//
+
+// let arr = ['a', 'b', 'c', 'd'];
+// console.log(arr.indexOf('c'));
+// console.log(arr.lastIndexOf('c'));
+// console.log(arr.includes('c'));
+
+//find//
+
+// let arr = [
+//   { id: 1, name: 'karthi' },
+//   { id: 2, name: 'santhiya' },
+//   { id: 3, name: 'sneha' },
+// ];
+// let find = arr.find((item, index) => index === 1);
+// console.log(find.name);
+
+//find index//
+
+// let arr = [5, 7, 9, 12, 76, 45, 100];
+// let filter = (val) => val > 120;
+// console.log(arr.findIndex(filter));
+
