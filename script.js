@@ -99,3 +99,39 @@
 //   return sum;
 // }
 // sum();
+
+// splice//
+
+// let arr = ['a', 'b', 'c', 'd'];
+// // arr.splice(1, 1);
+// // arr.splice(0, 3, 'z', 'y');
+// arr.splice(2, 0, 'x');
+// console.log(arr);
+
+//slice//
+
+// let arr = ['a', 'b', 'c', 'd'];
+// console.log(arr.slice(-1));
+
+//concat//
+
+// let arr = [1, 2];
+// console.log(arr.concat([3, 4], [5, 6]));
+
+//array like object//
+
+// let arr = [1, 2];
+// let arrayLike = {
+//   0: 'something',
+//   1: 'else',
+//   [Symbol.isConcatSpreadable]: true,
+//   length: 2,
+// };
+// console.log(arr.concat(arrayLike));
+
+//for each//
+
+// ['a', 'b', 'c'].forEach(console.log);
+// ['a', 'b', 'c'].forEach((item, index, array) =>
+//   console.log(item, index, array)
+// );
