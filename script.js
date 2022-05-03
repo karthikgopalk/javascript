@@ -156,6 +156,58 @@
 //find index//
 
 // let arr = [5, 7, 9, 12, 76, 45, 100];
-// let filter = (val) => val > 120;
+// let filter = (val) => val > 7;
 // console.log(arr.findIndex(filter));
 
+//filter//
+
+// let arr = [2, 4, 6, 8, 10];
+// let filter = (item) => item > 4;
+// console.log(arr.filter(filter));
+
+//map//
+
+// let arr = [1, 2, 3].map((item) => item * 5);
+// console.log(arr);
+
+// let arr = ['abc', 'gtf'].map((item) => item.length);
+// console.log(arr);
+
+// let arr = [
+//   { name: 'karthi', lastname: 'gopal' },
+//   { name: 'gopal', lastname: 'kandhi' },
+// ];
+// let mapValue = arr.map(setMap);
+// function setMap(item) {
+//   return [item.name, item.lastname].join(' ');
+// }
+// console.log(mapValue);
+
+//sort//
+
+// let arr = [1, 20, 5, 12];
+// arr.sort();
+// console.log(arr);
+
+// let arr = [1, 20, 5, 12];
+// function compareValue(a, b) {
+//   if (a > b) return 1;
+//   if (a == b) return 0;
+//   if (a < b) return -1;
+// }
+// arr.sort(compareValue);
+// console.log(arr);
+
+// let arr = [1, 20, 5, 12];
+// let sortValue = arr.sort((a, b) => a - b);
+// console.log(sortValue);
+
+// let arr = ['hello', 'everyone', 'zebra', 'Österreich'];
+// arr.sort((a, b) => a.localeCompare(b));
+// console.log(arr);
+
+//reverse//
+
+// let arr = [1, 2, 3, 4, 5];
+// arr.reverse();
+// console.log(arr);
