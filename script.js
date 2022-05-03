@@ -132,9 +132,7 @@
 //for each//
 
 // ['a', 'b', 'c'].forEach(console.log);
-// ['a', 'b', 'c'].forEach((item, index, array) =>
-//   console.log(item, index, array)
-// );
+// ['a', 'b', 'c'].forEach((item, index, array) => console.log(item));
 
 //indexof lastindexof includes//
 
@@ -211,3 +209,93 @@
 // let arr = [1, 2, 3, 4, 5];
 // arr.reverse();
 // console.log(arr);
+
+//split//
+
+// let stringval = 'hello,jhon,iam,karthik';
+// let split = stringval.split(',');
+// console.log(split);
+
+//convert string to array//
+
+// let stringval = 'hello';
+
+// let split = stringval.split(',');
+// console.log(split);
+
+// console.log([...stringval]);
+
+// console.log(Array.from(stringval));
+
+// console.log(Object.assign([], stringval));
+
+//join//
+
+// let arr = ['hello', 'hi', 'bob'];
+// console.log(arr.join(' '));
+
+//reduce//
+
+// let arr = [1, 2, 3, 4, 5];
+// console.log(arr.reduce((acc, item) => acc + item));
+
+//reduceright//
+
+// let arr = [1, 2, 3, 4, 5];
+// console.log(arr.reduceRight((acc, item) => acc + item));
+
+// isArray//
+
+// console.log(Array.isArray({}));
+// console.log(Array.isArray([]));
+
+//thisArgs//
+
+// let army = {
+//   minAge: 18,
+//   maxAge: 30,
+//   filterVal(user) {
+//     return user.age >= this.minAge && user.age < this.maxAge;
+//   },
+// };
+// let user = [
+//   { age: 10, [Symbol.isConcatSpreadable]: true, length: 1 },
+//   { age: 20, [Symbol.isConcatSpreadable]: true, length: 1 },
+//   { age: 18 },
+//   { age: 31 },
+// ];
+// let filterVal = user.filter(army.filterVal, army);
+// console.log(filterVal.length);
+
+//some//
+
+// let arr = [2, 4, 6, 8, 10];
+// console.log(arr.some((item) => item / 3));
+
+//every//
+
+// let arr = [2, 4, 6, 8, 10];
+// console.log(arr.every((item) => item > 1));
+
+//fill//
+
+// let arr = ['one', 'two', 'three', 'five'];
+// arr.fill('four', 1, 3);
+// console.log(arr);
+
+//copywithin//
+
+// let arr = ['one', 'two', 'three', 'four'];
+// arr.copyWithin(1, 2);
+// console.log(arr);
+
+// const fruits = ['Banana', 'Orange', 'Apple', 'Mango', 'Kiwi', 'Papaya'];
+// console.log(fruits.copyWithin(2, 1, 2));
+
+//flat//
+
+// let arr = [1, 2, 3, [4, 5]];
+// console.log(arr.flat());
+
+// let arr = [1, 2, 3, [[4, 5]], [6, 7]];
+// console.log(arr.flat(2));
