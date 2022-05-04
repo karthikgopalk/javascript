@@ -299,3 +299,63 @@
 
 // let arr = [1, 2, 3, [[4, 5]], [6, 7]];
 // console.log(arr.flat(2));
+
+//camalize//
+
+// function camalize(text) {
+//   return text
+//     .split('-')
+//     .map((item, index) =>
+//       index === 0 ? item : item[0].toUpperCase() + item.slice(1)
+//     )
+//     .join('');
+// }
+// console.log(camalize('bottom-color'));
+// console.log(camalize('bottom-color-background'));
+
+//filter//
+
+// let arr = [5, 3, 8, 1];
+// let filterd = filterRange(arr, 1, 4);
+// console.log(filterd);
+// console.log(arr);
+// function filterRange(arr, minValue, MaxValue) {
+//   return arr.filter((item) => item >= minValue && item <= MaxValue);
+// }
+
+//filter Range//
+
+// let arr = [5, 3, 8, 1];
+
+// filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+// function filterRangeInPlace(arr, a, b) {
+//   for (let i = 0; i <= arr.length; i++) {
+//     let val = arr[i];
+//     if (val < a || val > b) {
+//       arr.splice(i, 1);
+//       i--;
+//     }
+//   }
+// }
+
+// console.log(arr);
+
+//sort desending//
+
+// let arr = [5, 2, 1, -10, 11, 8];
+// arr.sort((a, b) => b - a);
+// console.log(arr);
+
+//copy sorted//
+
+// let arr = ['HTML', 'JavaScript', 'CSS'];
+
+// let sorted = copySorted(arr);
+
+// console.log(sorted); // CSS, HTML, JavaScript
+// console.log(arr); // HTML, JavaScript, CSS (no changes)
+
+// function copySorted(arr) {
+//   return arr.slice().sort();
+// }
