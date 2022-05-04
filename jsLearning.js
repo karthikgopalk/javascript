@@ -359,3 +359,164 @@
 // function copySorted(arr) {
 //   return arr.slice().sort();
 // }
+
+//object range iterator//
+
+// let range = {
+//   from: 5,
+//   to: 10,
+// };
+// range[Symbol.iterator] = function () {
+//   return {
+//     current: this.from,
+//     last: this.to,
+//     next() {
+//       if (this.current <= this.last) {
+//         return { done: false, value: this.current++ };
+//       } else return { done: true };
+//     },
+//   };
+// };
+// for (let rangeValue of range) {
+//   console.log(rangeValue);
+// }
+
+//Map//
+
+// let map = new Map();
+// map.set(1, 'one');
+// map.set(true, 'yes');
+// map.set('hello', 'hi');
+// console.log(map.has(1));
+// console.log(map.has(12));
+// console.log(map.get(true));
+// console.log(map.get('hello'));
+// map.delete('hello');
+// console.log(map.size);
+// map.clear();
+// console.log(map.get(1));
+
+//typeof object key//
+
+// let obj = {
+//   1: 10,
+// };
+// console.log(typeof obj);
+// for (let key in obj) {
+//   console.log(typeof key + key);
+// }
+
+//set object as key in map//
+
+// let obj = { name: 'karthi' };
+// let map = new Map();
+// map.set(obj, 123);
+// console.log(map.get(obj));
+
+//map chaining//
+
+// let map = new Map();
+// map.set(1, 10).set(2, 20).set(3, 30);
+// for (let entry of map) {
+//   console.log(entry);
+// }
+
+//for keys values entries//
+
+// let fruits = new Map([
+//   [1, 'apple'],
+//   [2, 'banana'],
+//   [3, 'mango'],
+// ]);
+// for (let entrykey of fruits.keys()) {
+//   console.log(entrykey);
+// }
+// for (let entryval of fruits.values()) {
+//   console.log(entryval);
+// }
+// for (let entry of fruits.entries()) {
+//   console.log(entry);
+// }
+
+//for each//
+
+// fruits.forEach((value, key, map) => console.log(value, key, map));
+
+//create map from object//
+
+// let obj = { name: 'karthi', age: 25 };
+// let map = new Map(Object.entries(obj));
+// for (let mapVal of map) {
+//   console.log(mapVal);
+// }
+
+//create object from map//
+
+// let obj = Object.fromEntries([
+//   ['one', 1],
+//   ['two', 2],
+// ]);
+// console.log(obj);
+
+// let obj2 = Object.fromEntries(fruits.entries());
+// console.log(obj2);
+
+//set//
+
+// let set = new Set();
+// let jhon = { name: 'jhon' };
+// let dani = { name: 'dani' };
+// let peter = { name: 'peter' };
+// set.add(jhon);
+// set.add(dani);
+// set.add(jhon);
+// set.add(dani);
+// set.add(peter);
+// console.log(set.size);
+// for (let val of set) {
+//   console.log(val);
+// }
+// set.forEach((val, key, set) => console.log(val, key, set));
+
+// function unique(arr) {
+//   return Array.from(new Set(arr));
+// }
+
+// let values = [
+//   'Hare',
+//   'Krishna',
+//   'Hare',
+//   'Krishna',
+//   'Krishna',
+//   'Krishna',
+//   'Hare',
+//   'Hare',
+//   ':-O',
+// ];
+
+// console.log(unique(values)); // Hare, Krishna, :-O
+
+//anagram//
+
+// let arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];
+
+// console.log(aclean(arr)); // "nap,teachers,ear" or "PAN,cheaters,era"\
+
+// function aclean(arr) {
+//   let map = new Map();
+//   for (let arrVal of arr) {
+//     let sorted = arrVal.toLowerCase().split('').sort().join('');
+//     map.set(sorted, arrVal);
+//   }
+//   return Array.from(map.values());
+// }
+
+//convert map to array//
+
+// let map = new Map();
+
+// map.set('name', 'John');
+
+// let keys = Array.from(map.keys());
+// keys.push('more');
+// console.log(keys);
