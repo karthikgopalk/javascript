@@ -736,3 +736,182 @@
 //   }
 //   return maxName;
 // }
+
+//date//
+
+// let date = new Date(0);
+// console.log(date);
+
+//hour to second//
+
+// let date = new Date(24 * 3600 * 1000);
+// console.log(date);
+
+// let date = new Date('1997-05-01');
+// console.log(date);
+
+//date properties//
+
+// let date = new Date();
+// console.log('date:', date.getDate());
+// console.log('day:', date.getDay());
+// console.log('month:', date.getMonth());
+// console.log('year:', date.getFullYear());
+// console.log('hours:', date.getHours());
+// console.log('minutes:', date.getMinutes());
+// console.log('sec:', date.getSeconds());
+// console.log('milli sec:', date.getMilliseconds());
+// console.log('timezone:', date.getTimezoneOffset());
+// console.log('time:', date.getTime());
+// console.log('utc date:', date.getUTCDate());
+// console.log('utc day:', date.getUTCDay());
+// console.log('utc year:', date.getUTCFullYear());
+// console.log('utc month:', date.getUTCMonth());
+// console.log('utc hours:', date.getUTCHours());
+// console.log('utc minutes:', date.getUTCMinutes());
+// console.log('utc sec:', date.getUTCSeconds());
+// console.log('utc milli sec:', date.getUTCMilliseconds());
+
+//auto adjust//
+
+// let date = new Date(2000, 0, 1);
+// date.setDate(date.getDate() + 2);
+// console.log(date);
+
+//timestamp//
+
+// let date = new Date();
+// console.log(+date);
+
+//timestamp from 1970//
+
+// let now = Date.now();
+// console.log(now);
+
+// let date = Date.parse('2020');
+// console.log(date);
+
+//calculate milli second from page loads//
+
+// console.log(performance.now());
+
+// let date = new Date(2012, 01, 20, 03, 12);
+// console.log(date);
+
+// let date = new Date(2012, 0, 4);
+// console.log(getWeekDay(date));
+// function getWeekDay(date) {
+//   let day = date.getDay();
+//   let week = ['SUN', 'MO', 'TU', 'WED', 'THU', 'FRI', 'SAT'];
+//   return week[day];
+// }
+
+// console.log(getLocalDay(date));
+
+// function getLocalDay(date) {
+//   let day = date.getDay();
+
+//   if (day == 0) {
+//     // weekday 0 (sunday) is 7 in european
+//     day = 7;
+//   }
+//   return day;
+// }
+
+//get correct date even subract//
+
+// let date = new Date(2015, 0, 2);
+
+// console.log(getDateAgo(date, 1)); // 1, (1 Jan 2015)
+// console.log(getDateAgo(date, 2)); // 31, (31 Dec 2014)
+// console.log(getDateAgo(date, 365)); // 2, (2 Jan 2014)
+
+// function getDateAgo(date, num) {
+//   let dateClone = new Date(date);
+//   dateClone.setDate(date.getDate() - num);
+//   return dateClone.getDate();
+// }
+
+//get last day of month//
+
+// function getLastDayOfMonth(year, month) {
+//   let date = new Date(year, month + 1, 0);
+//   return date.getDate();
+// }
+// console.log(getLastDayOfMonth(2021, 02));
+
+//get second of date//
+
+// function getSecondsToday() {
+//   let now = new Date();
+//   let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+//   let diff = now - today;
+//   return diff / 1000;
+// }
+// console.log(getSecondsToday());
+
+// function getSecondsToday() {
+//   let date = new Date();
+//   return date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
+// }
+// console.log(getSecondsToday());
+
+//get seconds till tomorrow//
+
+// function getSecondsToTomorrow() {
+//   let date = new Date();
+//   let tomorrow = new Date(
+//     date.getFullYear(),
+//     date.getMonth(),
+//     date.getDate() + 1
+//   );
+//   let diff = tomorrow - date;
+//   return Math.round(diff / 1000);
+// }
+// console.log(getSecondsToTomorrow());
+
+//convert object to string//
+
+// let obj = { name: 'karthi', age: 20, de: 'jf' };
+// function convertObjectToString(obj) {
+//   return Object.entries(obj).reduce((str, [p, val]) => {
+//     return `${str}${p}::${val}\n`;
+//   }, '');
+// }
+// console.log(convertObjectToString(obj));
+
+//json stringify//
+
+// let student = {
+//   name: 'John',
+//   age: 30,
+//   isAdmin: false,
+//   courses: ['html', 'css', 'js'],
+//   wife: null,
+// };
+// console.log(JSON.stringify(student));
+// console.log(JSON.stringify(1));
+// console.log(JSON.stringify('hello'));
+// console.log(JSON.stringify([1, 2, 3]));
+
+//tojson//
+
+// let obj = {
+//   name: 'karthi',
+//   toJSON() {
+//     return this.name;
+//   },
+// };
+// console.log(obj);
+
+//json parse//
+
+// let num = '[1,2,3]';
+// console.log(JSON.parse(num));
+
+// let user = {
+//   name: 'John Smith',
+//   age: 35,
+// };
+
+// console.log(JSON.parse(JSON.stringify(user)));
