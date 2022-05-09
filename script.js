@@ -158,3 +158,37 @@
 //   return rest;
 // }
 // alert(sum(5)(6)(7));
+
+//new function//
+
+// let sum = new Function('a', 'b', 'return a+b');
+// console.log(sum(5, 6));
+
+// let hi = new Function('console.log("hi hi")');
+// hi();
+
+//scheduling//
+
+// function hello() {
+//   console.log('hello');
+// }
+// setTimeout(hello, 5000);
+
+// function hello(one, two) {
+//   console.log(one, two);
+// }
+// setTimeout(hello, 3000, 'hello', 'world');
+
+// setTimeout('console.log("hello")', 2000);
+
+// setTimeout(() => console.log('hello wrld'), 2000);
+
+// let timerId = setTimeout('hello', 2000);
+// console.log(timerId);
+// clearTimeout(timerId);
+
+// let time = setInterval(() => console.log('hi'), 4000);
+// clearInterval(time);
+
+// let interval = setInterval(() => console.log('interval'), 2000);
+// setTimeout(() => clearTimeout(interval), 5000);
