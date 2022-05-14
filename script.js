@@ -151,3 +151,45 @@
 //   console.log(check);
 //   console.log(keys);
 // }
+
+//append array//
+
+// let arr = [1, 2, 3, 4];
+// arr[arr.length] = 5;
+// arr.push(6);
+// console.log(arr);
+
+// let obj = { num: 10 };
+// delete obj;
+// obj = null
+// console.log(obj);
+// let a
+// a = 10
+// delete a
+// console.log(a)
+
+//class//
+
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   sayhi() {
+//     console.log(this.name);
+//   }
+// }
+// let user = new User('john');
+// user.sayhi();
+
+// class Admin {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   sayhi() {
+//     return this.name;
+//   }
+// }
+// let admin = new Admin('karthi');
+// console.log(admin.sayhi());
+
+document.body.style.background = 'red';
