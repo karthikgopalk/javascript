@@ -191,5 +191,3 @@
 // }
 // let admin = new Admin('karthi');
 // console.log(admin.sayhi());
-
-document.body.style.background = 'red';
