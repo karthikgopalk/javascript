@@ -191,3 +191,77 @@
 // }
 // let admin = new Admin('karthi');
 // console.log(admin.sayhi());
+
+//prototype//
+
+// function Student(name, sub) {
+//   this.name = name;
+//   this.sub = sub;
+// }
+// let student1 = new Student('karthi', 'cse');
+// console.log(student1.__proto__);
+// console.log(Student.prototype);
+// console.log(student1.prototype);
+// console.log(typeof Student.prototype);
+// console.log(typeof student1.__proto__);
+// console.log(Student.prototype == student1.__proto__);
+
+// Student.prototype.age = 20;
+// console.log(student1);
+// console.log(typeof student1);
+
+// let student2 = new Student('jhon', 'cse');
+// console.log(student2.age);
+
+// function Student() {
+//   this.name = 'karthi';
+//   this.dept = 'cse';
+// }
+// let student1 = new Student();
+// console.log(student1);
+// console.log(Student);
+// Student.prototype.age = function () {
+//   return 'the age is ' + 10;
+// };
+// Student.prototype.date = 01;
+// console.log(student1.date);
+// Student.prototype = { date: 5 };
+// console.log(student1.date);
+// console.log(student1.age());
+// let proto = Object.getPrototypeOf(student1);
+// console.log(proto.constructor);
+// console.log(Object.prototype);
+
+// let x = 'constructor';
+// console.log(x[x]);
+
+// let animal = {
+//   name: 'lion',
+// };
+// let type = {
+//   veg: 'vegiterian',
+// };
+// animal.__proto__ = type;
+// console.log(animal.veg);
+
+let head = {
+  glasses: 1,
+  __proto__: table,
+};
+
+let table = {
+  pen: 3,
+  __proto__: bed,
+};
+
+let bed = {
+  sheet: 1,
+  pillow: 2,
+  __proto__: pockets,
+};
+
+let pockets = {
+  money: 2000,
+};
+
+console.log(head.glasses);
