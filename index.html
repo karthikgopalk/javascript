@@ -1,11 +1,16 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <h1>Hello there!</h1>
+    <p id="textDemo">hello</p>
+    <button id="clickme">click</button>
     <a href="/me.html">My other page</a>
+    <script>
+      document.getElementById('textDemo').innerHTML = 'hello world';
+    </script>
   </body>
 </html>
