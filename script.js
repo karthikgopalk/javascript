@@ -1,23 +1,9 @@
-//callback//
+//generator funnction//
 
-// function loadScript(src, callback) {
-//   let script = document.createElement('script');
-//   script.src = src;
-//   script.onload = () => callback(script);
-//   document.head.append(script);
-// }
-
-// setTimeout(function () {
-//   console.log('setTimeout');
-// }, 5000);
-// function x(y) {
-//   console.log('x');
-//   y();
-// }
-// x(function () {
-//   console.log('y');
-// });
-
-document.getElementById('clickme').addEventListener('click', function xyz() {
-  console.log('clicked');
-});
+function* generatorFun() {
+  yield 1;
+  yield 2;
+  return 5;
+}
+let generator = generatorFun();
+console.log(generator);

@@ -577,3 +577,150 @@
 // window.onerror = function (message, url, line, column, error) {
 //   console.log(message, url, line, column, error);
 // };
+
+//callback//
+
+// function loadScript(src, callback) {
+//   let script = document.createElement('script');
+//   script.src = src;
+//   script.onload = () => callback(script);
+//   document.head.append(script);
+// }
+
+// setTimeout(function () {
+//   console.log('setTimeout');
+// }, 5000);
+// function x(y) {
+//   console.log('x');
+//   y();
+// }
+// x(function () {
+//   console.log('y');
+// });
+
+// document.getElementById('clickme').addEventListener('click', function xyz() {
+//   console.log('clicked');
+// });
+
+//promise//
+
+// let fullfilled = new Promise(function (resolve, reject) {
+//   setTimeout(() => resolve('donne'), 1000);
+// });
+
+// let rejects = new Promise(function (resolve, reject) {
+//   setTimeout(() => reject(new Error('rejected')), 1000);
+// });
+
+// let promiseSuccess = new Promise(function (resolve, reject) {
+//   setTimeout(() => resolve('it is resolved'), 1000);
+// });
+// let promiseReject = new Promise(function (resolve, reject) {
+//   setTimeout(() => reject(new Error('oops it an error')), 1000);
+// });
+// promiseSuccess.then(
+//   (result) => console.log(result),
+//   (error) => console.log(error)
+// );
+// promiseSuccess.then(console.log);
+// promiseReject.then(null, console.log);
+// promiseReject.catch(console.log);
+
+// new Promise(function (resolve, reject) {
+//   setTimeout(() => resolve('promises'), 1000);
+// })
+//   .finally(() => console.log('finally'))
+//   .then((result) => console.log(result));
+
+// new Promise((resolve) => resolve('done')).then(console.log);
+
+// new Promise(function (resolve, reject) {
+//   setTimeout(() => resolve(1), 1000);
+// })
+//   .then(function (result) {
+//     console.log(result);
+//     return result * 2;
+//   })
+//   .then(function (result) {
+//     console.log(result);
+//     return result * 2;
+//   });
+
+// let p = new Promise((resolve, reject) => {
+//   let a = 1 + 1;
+//   if (a == 2) {
+//     resolve('success');
+//   } else {
+//     reject('failed');
+//   }
+// });
+// p.then((message) => console.log(message)).catch((message) =>
+//   console.log(message)
+// );
+
+// let p1 = new Promise((resolve, reject) => {
+//   resolve('p1 is success');
+// });
+// let p2 = new Promise((resolve, reject) => {
+//   resolve('p2 is success');
+// });
+// let p3 = new Promise((resolve, reject) => {
+//   resolve('p3 is success');
+// });
+
+// let p = Promise.all([p1, p2, p3]).then((messages) => {
+//   console.log(messages);
+// });
+// let pRace = Promise.race([p1, p2, p3]).then((message) => {
+//   console.log(message);
+// });
+
+//fetch get//
+
+// fetch('https://reqres.in/api/users/1')
+//   .then((response) => {
+//     if (response.ok) console.log('success');
+//     else console.log('not success');
+//   })
+//   .then((data) => console.log(data))
+//   .catch((err) => new Error('error' + err));
+
+// fetch('https://reqres.in/api/users', {
+//   method: 'POST',
+//   headers: {
+//     'content-type': 'application/json',
+//   },
+//   body: JSON.stringify({
+//     name: 'user1',
+//   }),
+// })
+//   .then((res) => res.json())
+//   .then((res) => console.log(res))
+//   .catch((err) => new Error(err));
+
+//async await//
+
+// async function f1() {
+//   return 'async';
+// }
+// f1().then(console.log);
+
+// async function f() {
+//   let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('success'), 1000);
+//   });
+//   let value = await promise;
+//   console.log(promise);
+// }
+// f();
+
+// async function loadJson(url) {
+//   let response = await fetch(url);
+//   if (response.status == 200) {
+//     let json = await response.json();
+//     return json;
+//   }
+//   throw new Error(response.status);
+// }
+
+// loadJson('https://javascript.info/no-such-user.json').catch(alert); // Error: 404
