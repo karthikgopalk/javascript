@@ -724,3 +724,16 @@
 // }
 
 // loadJson('https://javascript.info/no-such-user.json').catch(alert); // Error: 404
+
+//generator funnction//
+
+// function* generator() {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// }
+// let generatorfun = generator();
+// console.log(generatorfun);
+// console.log(generatorfun.next());
+// console.log(generatorfun.next());
+// console.log(generatorfun.next());
