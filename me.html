@@ -1,9 +1,45 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+      }
+      div {
+        display: flex;
+        margin: 5rem;
+        padding: 1rem;
+        border: 2px solid black;
+        min-height: 1rem;
+        flex-grow: 1;
+      }
+      #grandParent {
+        background-color: green;
+        flex-direction: column;
+      }
+      .parent {
+        background-color: yellow;
+      }
+      .child {
+        background-color: hsl(200, 50%, 50%);
+      }
+    </style>
   </head>
   <body>
-    <h2>oh whaaa!</h2>
-    <h1>hi</h1>
+    <div id="grandParent">
+      <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+      </div>
+      <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+      </div>
+    </div>
+    <script>
+      // console.log(document.documentElement);
+      // console.log(document.body);
+      // console.log(document.head);
+    </script>
   </body>
 </html>
