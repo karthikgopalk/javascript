@@ -2,44 +2,66 @@
 <html>
   <head>
     <style>
-      body {
-        margin: 0;
-      }
-      div {
-        display: flex;
-        margin: 5rem;
-        padding: 1rem;
-        border: 2px solid black;
-        min-height: 1rem;
-        flex-grow: 1;
-      }
-      #grandParent {
-        background-color: green;
-        flex-direction: column;
-      }
-      .parent {
-        background-color: yellow;
-      }
-      .child {
-        background-color: hsl(200, 50%, 50%);
-      }
+    body{
+      margin:0;
+      min-height:100vh;
+    }
+    body,div{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .grandParent{
+      width:200px;
+      height:200px;
+      background-color:blue;
+    }
+    .parent{
+      width:130px;
+      height:130px;
+      background-color:green;
+    }
+    .child{
+      width:60px;
+      height:60px;
+      background-color:red;
+    }
     </style>
+    <script src="script.js"></script>
   </head>
   <body>
-    <div id="grandParent">
+    <div class="grandParent">
       <div class="parent">
         <div class="child"></div>
-        <div class="child"></div>
       </div>
-      <div class="parent">
-        <div class="child"></div>
-        <div class="child"></div>
-      </div>
-    </div>
     <script>
       // console.log(document.documentElement);
       // console.log(document.body);
       // console.log(document.head);
+//       let grandParentQ = document.querySelector('.grandParent')
+//       let parent = document.querySelector('.parent')
+//       let child = document.querySelector('.child')
+//       grandParentQ.addEventListener("click",e=>{
+//         // e.stopPropagation();
+// console.log('grand parent clicked')},{capture:true})
+//       parent.addEventListener("click",e=>{
+//         console.log('parent clicked')})
+//       child.addEventListener("click",e=>{
+//         once:true;
+
+//         console.log('child clicked')})
+//       document.addEventListener('click',e=>{
+// console.log('document clicked')})
+
+let doc = document.createElement('div')
+doc.style.height = '200px';
+doc.style.width = '200px';
+doc.style.backgroundColor = 'purple'
+doc.addEventListener('click',()=>{
+  console.log('hi')
+})
+document.body.append(doc)
+
     </script>
   </body>
 </html>
