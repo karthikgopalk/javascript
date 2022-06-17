@@ -113,17 +113,56 @@
 //   );
 // console.log(includes);
 
+// let obj = {
+//   firstName: 'pika',
+//   lastName: 'chu',
+//   fname: this.firstName,
+//   onFullName() {
+//     return this.firstName + this.lastName;
+//   },
+// };
+// function getFullName() {
+//   return this.onFullName() + ' ' + 'like pokeman';
+// }
+// let bindName = getFullName.bind(obj);
+// console.log(bindName());
+// console.log(obj.fname);
+
+// const obj = {
+//   firstName: 'sachin',
+//   lastName: 'tendulkar',
+// };
+// let fullName = function(city) {
+//   return console.log(this.firstName + ' ' + this.lastName+' '+city);
+// },
+// const obj2 = {
+//   firstName: 'virat',
+//   lastName: 'kohli',
+// };
+// fullName.call(obj2,'mumbai');
+// fullName.call(obj,'delhi')
+
+// function demo(d){
+//   console.log('val',d)
+// }
+// demo.call('hello')
+// demo('hi')
+
+// let bindVal = fullName.bind(obj)
+// console.log(bindVal)
+// bindVal('check')
+
+// console.log(Number);
+
+// const math = Math.max.apply(null, [1, 2, 3]);
+// console.log(math);
+
 let obj = {
-  firstName: 'pika',
-  lastName: 'chu',
-  fname: this.firstName,
-  onFullName() {
-    return this.firstName + this.lastName;
+  fname: 'karthi',
+  lname: 'gopal',
+  fullName() {
+    console.log(this.fname + this.lname);
   },
 };
-function getFullName() {
-  return this.onFullName() + ' ' + 'like pokeman';
-}
-let bindName = getFullName.bind(obj);
-console.log(bindName());
-console.log(obj.fname);
+let bindVal = obj.fullName.bind(obj);
+setTimeout(bindVal, 0);
