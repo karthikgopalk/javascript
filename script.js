@@ -157,12 +157,15 @@
 // const math = Math.max.apply(null, [1, 2, 3]);
 // console.log(math);
 
-let obj = {
-  fname: 'karthi',
-  lname: 'gopal',
-  fullName() {
-    console.log(this.fname + this.lname);
-  },
-};
-let bindVal = obj.fullName.bind(obj);
-setTimeout(bindVal, 0);
+// let obj = {
+//   fname: 'karthi',
+//   lname: 'gopal',
+//   fullName() {
+//     console.log(this.fname + this.lname);
+//   },
+// };
+// let bindVal = obj.fullName.bind(obj);
+// setTimeout(bindVal, 0);
+
+// const sum = (a) => (b) => b ? sum(b + a) : a;
+// console.log(sum(2)(4)(6)(8)(10)());
