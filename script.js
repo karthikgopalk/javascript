@@ -169,3 +169,18 @@
 
 // const sum = (a) => (b) => b ? sum(b + a) : a;
 // console.log(sum(2)(4)(6)(8)(10)());
+
+let obj = {
+  name: 'karthi',
+  age: 20,
+  get details() {
+    return this.name + ' ' + this.age;
+  },
+  set details(value) {
+    [this.name, this.age] = value.split(' ');
+  },
+};
+obj.name = 'hi';
+obj.details = 'rio 20';
+
+console.log(obj.details);
